@@ -1,0 +1,111 @@
+@import "../../../../../styles/style";
+
+.OtherLink {
+    @include column-a-center();
+    width: 100%;
+    &__Container {
+        @include row-a-center();
+        justify-content: center;
+        width: calc(100% - 40px);
+        padding: 0 20px;
+    }
+    &__OtherStockInfos {
+        padding-top: 30px;
+        width: 650px;
+        & > div {
+            width: 650px;
+            & > img {
+                cursor: pointer;
+                width: 190px;
+                padding: 15px 8px 5px 8px;
+            }
+        }
+    }
+    &__RelatedAgencies {
+        padding: 25px;
+        margin-top: 25px;
+        width: 200px;
+        color: #4b5566;
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 12px;
+        list-style: none;
+        & > li {
+            cursor: pointer;
+            padding-top: 10px;
+            font-size: 15px;
+            &:hover {
+                color: rgb(45, 134, 218);
+            }
+        }
+        & > li:first-child {
+            cursor: default;
+            padding-bottom: 5px;
+            font-size: 18px;
+            color: rgb(45, 134, 218);
+        }
+        & > li:last-child {
+            @include row();
+            justify-content: flex-end;
+        }
+    }
+}
+
+// @media screen and (max-width: 1170px) {
+//     .OtherLink {
+//         &__Container {
+//             @include row-a-center();
+//             justify-content: center;
+//             width: calc(100% - 40px);
+//             padding: 0 20px;
+//         }
+//         &__RelatedAgencies {
+//             margin: 30px 0 0 0;
+//         }
+//     }
+// }
+
+@media screen and (max-width: 890px) {
+    .OtherLink {
+        &__Container {
+            @include column-a-center();
+        }
+        &__OtherStockInfos {
+            @include column-a-center();
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 621px) {
+    .OtherLink {
+        padding: 0 auto;
+        margin: 0;
+        &__Container {
+            padding: 0 auto;
+            margin: 0;
+        }
+        &__OtherStockInfos {
+            padding: 0 auto;
+            & > div {
+                padding: 0 auto;
+                width: 390px;
+                & > img {
+                    padding: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .OtherLink {
+        &__OtherStockInfos {
+            & > div {
+                width: 350px;
+                & > img {
+                    padding: 2px;
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
