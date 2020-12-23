@@ -87,7 +87,7 @@
             padding: 0 auto;
             & > div {
                 padding: 0 auto;
-                width: 390px;
+                width: fit-content;
                 & > img {
                     padding: 2px;
                 }
@@ -100,7 +100,9 @@
     .OtherLink {
         &__OtherStockInfos {
             & > div {
-                width: 350px;
+                width: fit-content;
+                min-width: 350px;
+                max-width: 550px;
                 & > img {
                     padding: 2px;
                     width: 150px;
