@@ -26,6 +26,7 @@
 
     &__Arrange {
         @include row-a-center();
+        white-space:nowrap;
         height: 45px;
         padding: 0 10px;
         margin-bottom: -1px;
@@ -72,6 +73,7 @@
     }
 
     &__Search {
+        white-space:nowrap;
         @include row-a-center();
         background-color: #fff;
         border-radius: 5px;
