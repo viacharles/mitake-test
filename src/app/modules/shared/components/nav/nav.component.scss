@@ -3,177 +3,107 @@
     @include row-a-center();
     justify-content: center;
     position: fixed;
+    z-index: 100;
     background-color: rgb(250, 250, 250);
     width: 100%;
     border-bottom: 1px solid rgb(238, 238, 238);
     &__Container {
-        @include row-a-center();
-        justify-content: space-between;
-        width: 1170px;
-        height: 100%;
-        &>i {
-            visibility: hidden;
-            width: 0;
-        }
-        &>img {
-            cursor: pointer;
-            width: 290px;
-        }
-        &>ul {
-            @include row();
-            justify-content: flex-end;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            font-size: 15px;
-            color: rgb(73, 73, 73);
-            border-right: 1px solid rgb(235, 233, 233);
-            list-style: none;
-            &>li {
-                cursor: pointer;
-                height: 100%;
-                padding: 20px 16px;
-                border-left: 1px solid rgb(235, 233, 233);
-                background-color: rgb(245, 245, 245);
-                &:hover {
-                    color: rgb(255, 255, 255);
-                    background-color: rgb(108, 168, 224);
-                }
-            }
-            &>li:last-child {
-                position: relative;
-                color: rgb(255, 255, 255);
-                background-color: rgb(190, 172, 64);
-                &:hover {
-                    background-color: rgb(230, 209, 94);
-                }
-            }
-        }
-    }
-    &__LoginCard {
-        position: absolute;
-        top: 70px;
-        right: -100px;
-        width: 300px;
-        height: 360px;
-        background-color: rgb(255, 255, 255);
-        border: 1px solid rgb(196, 196, 196);
-        border-top: 7px solid rgb(45, 134, 218);
-        &>span:first-child {
-            position: fixed;
-            z-index: 60;
-            top: 65px;
-            right: 270px;
-            width: 10px;
-            height: 10px;
-            transform: rotate(45deg);
-            background-color: rgb(45, 134, 218);
-        }
-        &>span:nth-child(2) {
-            display: flex;
-            width: 100%;
-            height: 80px;
-            background-image: url(../../../../../assets/img/login2.jpg);
-        }
-    }
-    &__LoginCategory {
-        @include row-a-center();
-        height: 40px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        &>li {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            font-size: 14px;
-            color: rgb(146, 146, 146);
-            padding: 2px 5px;
-            border-right: 1px solid rgb(218, 218, 218);
-            cursor: pointer;
-            &:hover {
-                border-bottom: 2px solid rgb(221, 221, 221);
-            }
-            &:hover #Image {
-                height: 100px;
-                background-image: url(../../../../../assets/img/login3.jpg);
-            }
-        }
-        &>li:first-child {
-            color: #000;
-            border-bottom: 2px solid rgb(108, 168, 224);
-            &:hover {
-                border-bottom: 3px solid rgb(108, 168, 224);
-            }
-        }
-    }
-    &__LoginInput {
-        @include column();
+        @include column-a-center();
         width: 100%;
-        padding: 15px 25px 0 25px;
-        &>span {
-            padding: 5px 50px 2px 0;
-            font-size: 15px;
-            color: #797979;
-        }
-        &>input {
-            height: 25px;
-            width: 235px;
-            padding-left: 10px;
-            border-radius: 5px;
-            border: 1px solid rgb(196, 196, 196);
-            outline-style: none;
-        }
-        &>span:nth-child(5) {
-            padding-left: 167px;
-            font-size: 14px;
-            color: rgb(86, 161, 231);
-            cursor: pointer;
-            &>i {
-                padding-left: 4px;
+        height: 100%;
+        & > div {
+            @include row-a-center();
+            justify-content: space-between;
+            width: 1170px;
+            & > i {
+                visibility: hidden;
+                width: 0;
             }
-        }
-        &>button {
-            width: 60px;
-            height: 35px;
-            font-size: 16px;
-            color: rgb(255, 255, 255);
-            margin-left: 90px;
-            background-color: rgb(86, 161, 231);
-            border: none;
-            border-radius: 5px;
-            outline-style: none;
-            &:hover {
-                background-color: rgb(121, 190, 255);
+            & > img {
+                cursor: pointer;
+                width: 290px;
+            }
+            & > ul {
+                @include row();
+                justify-content: flex-end;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                font-size: 15px;
+                color: rgb(73, 73, 73);
+                border-right: 1px solid rgb(235, 233, 233);
+                list-style: none;
+                & > li {
+                    cursor: pointer;
+                    height: 100%;
+                    padding: 20px 16px;
+                    border-left: 1px solid rgb(235, 233, 233);
+                    background-color: rgb(245, 245, 245);
+                    &:hover {
+                        color: rgb(255, 255, 255);
+                        background-color: rgb(108, 168, 224);
+                    }
+                }
+                & > li:last-child {
+                    position: relative;
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(190, 172, 64);
+                    &:hover {
+                        background-color: rgb(230, 209, 94);
+                    }
+                }
             }
         }
     }
-    &__NoviceTeaching {
-        @include row();
-        &>button {
-            cursor: pointer;
-            width: 100%;
-            height: 30px;
-            margin-top: 22px;
+    &__News {
+        @include row-a-center();
+        width: 900px;
+        height: 45px;
+        background-color: rgb(255, 255, 255);
+        & > span:first-child {
+            @include row-a-center();
+            justify-content: center;
+            width: 80px;
+            height: 100%;
+            padding: 0 10px;
+            font-size: 15px;
             color: rgb(255, 255, 255);
             background-color: rgb(108, 168, 224);
-            border: none;
-            outline-style: none;
+            // border-radius: 8px 0 0 8px;
         }
-        &>button:first-child {
-            border-right: 1px solid white;
+        & > span:nth-child(2) {
+            @include row-a-center();
+            justify-content: center;
+            padding-left: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            &:hover {
+                color: rgb(136, 136, 136);
+            }
         }
-        ;
+        & > span:last-child {
+            padding-right: 25px;
+            font-size: 14px;
+            font-weight: 800;
+            color: rgb(155, 155, 155);
+            cursor: pointer;
+            &:hover {
+                color: rgb(136, 136, 136);
+            }
+        }
     }
 }
 
-@media screen and (max-width: 1268px) {
+@media screen and (max-width: 1190px) {
     .Nav {
         &__Container {
+            & > div {
+                width: 100%;
+            }
+        }
+        &__News {
             width: 100%;
         }
     }
@@ -181,25 +111,47 @@
 
 @media screen and (max-width: 890px) {
     .Nav {
-        max-height: 40px;
+        height: auto;
+        padding: 0 10px;
         &__Container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            &>img {
-                width: 200px;
-                padding-left: 10px;
+            & > div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 50px;
+                & > img {
+                    width: 250px;
+                    padding-left: 10px;
+                }
+                & > i {
+                    cursor: pointer;
+                    visibility: visible;
+                    padding-right: 40px;
+                    font-size: 25px;
+                    color: rgb(108, 168, 224);
+                }
+                & > ul {
+                    visibility: hidden;
+                    max-width: 20px;
+                }
             }
-            &>i {
-                cursor: pointer;
-                visibility: visible;
-                padding-right: 40px;
-                font-size: 20px;
-                color: #4b5566;
+        }
+        &__News {
+            width: 100%;
+            & > span:first-child {
+                min-width: 80px;
             }
-            &>ul {
+            & > span:nth-child(2) {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                white-space: normal;
+            }
+            & > span:last-child {
                 visibility: hidden;
-                max-width: 20px;
             }
         }
     }

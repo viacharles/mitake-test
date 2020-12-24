@@ -49,6 +49,7 @@
         &__Container {
             @include row-a-center();
             justify-content: center;
+            padding-right: 10px;
         }
         &__AboutUs {
             padding-right: 0;
@@ -59,12 +60,14 @@
 @media screen and (max-width: 540px) {
     .Footer {
         &__AboutUs {
-            @include column-a-center();
+            @include column();
+            align-items: flex-start;
             & > span {
-                text-align: center;
+                text-align: left;
             }
             & > span:nth-child(2) {
-                @include column-a-center();
+                @include column();
+                align-items: flex-start;
                 padding: 0;
                 & > span:first-child {
                     padding: 0;
@@ -75,6 +78,8 @@
                     border-bottom: 1px solid #4b5566;
                 }
                 & > span:last-child {
+                    @include column();
+                    align-items: flex-start;
                     padding: 25px 0 0 0;
                 }
             }

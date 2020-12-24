@@ -1,10 +1,11 @@
 @import "../../../styles/mixin";
 
 .Layout {
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
     padding: 0;
     margin: 0;
+  
     &__Container {
         position: relative;
         width: 100%;
@@ -18,5 +19,6 @@
         height: 100%;
         padding: 0;
         margin: 0;
+
     }
 }

@@ -16,3 +16,11 @@
     flex-direction: row;
     align-items: center;
 }
+
+@mixin item {
+    cursor: default;
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(121, 121, 121);
+    white-space:nowrap;
+}
